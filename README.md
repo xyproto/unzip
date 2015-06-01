@@ -1,3 +1,5 @@
 # unzip
 
-Small unzip package for go
+`unzip` package and a small unzip utility named `uz`.
+
+Can extract ZIP files.
