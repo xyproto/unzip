@@ -1,3 +1,3 @@
 # unzip
 
-Small unzip package for go
+Small unzip package for go.
