@@ -3,14 +3,27 @@ package unzip
 
 import (
 	"archive/zip"
+	"errors"
 	"io"
 	"os"
 	"path/filepath"
-	"errors"
 )
+
+// Max zip file filename length
+const maxLength = 150
 
 // Given a source filename and a destination path, extract the ZIP archive
 func Extract(zipFilename, destPath string) error {
+	// Extract the ZIP file and don't filter out any files
+	return FilterExtract(zipFilename, destPath, func(_ string) bool {
+		return true
+	})
+}
+
+// Given a source filename and a destination path, extract the ZIP archive.
+// The filter function can be used to avoid extracting some filenames;
+// when filterFunc returns true, the file is extracted.
+func FilterExtract(zipFilename, destPath string, filterFunc func(string) bool) error {
 
 	// Open the source filename for reading
 	zipReader, err := zip.OpenReader(zipFilename)
@@ -38,9 +51,16 @@ func Extract(zipFilename, destPath string) error {
 			if err != nil {
 				return err
 			}
+			// Continue to the next file in the archive
 			continue
 		}
-		if len(archiveReader.Name) >= 150 {
+
+		if !filterFunc(finalPath) {
+			// Skip this file
+			continue
+		}
+
+		if len(archiveReader.Name) >= maxLength {
 			return errors.New("Too long filename: " + archiveReader.Name)
 		}
 
