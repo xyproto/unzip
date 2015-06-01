@@ -20,7 +20,7 @@ func main() {
 	} else {
 		o.Println(o.LightGreen("Extracting " + zipfile + "..."))
 	}
-	if err := unzip.FilterExtract(zipfile, directory, func (filename string) bool {
+	if err := unzip.FilterExtract(zipfile, directory, func(filename string) bool {
 		o.Println(o.LightBlue("Extracting " + filename))
 		return true
 	}); err != nil {
