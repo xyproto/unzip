@@ -2,12 +2,13 @@ package main
 
 import (
 	"flag"
-	"github.com/xyproto/term"
+
+	"github.com/xyproto/textoutput"
 	"github.com/xyproto/unzip"
 )
 
 func main() {
-	o := term.NewTextOutput(true, true)
+	o := textoutput.NewTextOutput(true, true)
 	flag.Parse()
 	if len(flag.Args()) == 0 {
 		o.ErrExit("Provide a ZIP filename and (optionally) a directory to extract to.")
