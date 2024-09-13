@@ -1,0 +1,22 @@
+# github.com/gdamore/encoding v1.0.0
+## explicit; go 1.9
+github.com/gdamore/encoding
+# github.com/gdamore/tcell v1.1.1
+## explicit; go 1.9
+github.com/gdamore/tcell
+github.com/gdamore/tcell/termbox
+github.com/gdamore/tcell/terminfo
+# github.com/lucasb-eyer/go-colorful v0.0.0-20181028223441-12d3b2882a08
+## explicit
+github.com/lucasb-eyer/go-colorful
+# github.com/mattn/go-runewidth v0.0.4
+## explicit
+github.com/mattn/go-runewidth
+# github.com/xyproto/term v0.3.0
+## explicit
+github.com/xyproto/term
+# golang.org/x/text v0.3.0
+## explicit
+golang.org/x/text/encoding
+golang.org/x/text/encoding/internal/identifier
+golang.org/x/text/transform
