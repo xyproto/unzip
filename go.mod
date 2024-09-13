@@ -2,12 +2,16 @@ module github.com/xyproto/unzip
 
 go 1.23.1
 
-require github.com/xyproto/term v0.3.0
+require github.com/xyproto/textoutput v1.16.6
 
 require (
-	github.com/gdamore/encoding v1.0.0 // indirect
-	github.com/gdamore/tcell v1.1.1 // indirect
-	github.com/lucasb-eyer/go-colorful v0.0.0-20181028223441-12d3b2882a08 // indirect
-	github.com/mattn/go-runewidth v0.0.4 // indirect
-	golang.org/x/text v0.3.0 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.20 // indirect
+	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
+	github.com/nathan-fiscaletti/consolesize-go v0.0.0-20220204101620-317176b6684d // indirect
+	github.com/pkg/term v1.2.0-beta.2.0.20210419004637-f749b98bd0ba // indirect
+	github.com/xyproto/burnfont v1.2.3 // indirect
+	github.com/xyproto/env/v2 v2.5.0 // indirect
+	github.com/xyproto/vt100 v1.14.5 // indirect
+	golang.org/x/sys v0.24.0 // indirect
 )
