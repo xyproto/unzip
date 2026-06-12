@@ -7,7 +7,7 @@ import (
 	"github.com/xyproto/unzip"
 )
 
-const versionString = "uz 1.0.0"
+const versionString = "uz 1.0.1"
 
 func main() {
 	o := textoutput.NewTextOutput(true, true)
